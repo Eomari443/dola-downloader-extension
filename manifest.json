@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "Eomari443 Dola 1080P Downloader",
+  "version": "1.0.3",
+  "description": "Ultra-Fast 1080P Raw Unwatermarked Video & Media Downloader for Dola AI",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Eomari443 Dola Downloader",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": [
+    "downloads",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://dola.com/*",
+    "https://*.dola.com/*",
+    "https://doubao.com/*",
+    "https://*.doubao.com/*",
+    "https://*.byteintlapi.com/*",
+    "https://*.ibytedtos.com/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.dola.com/*",
+        "https://dola.com/*",
+        "https://www.doubao.com/*",
+        "https://doubao.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-interceptor.js"
+      ],
+      "matches": [
+        "https://www.dola.com/*",
+        "https://dola.com/*",
+        "https://www.doubao.com/*",
+        "https://doubao.com/*"
+      ]
+    }
+  ]
+}

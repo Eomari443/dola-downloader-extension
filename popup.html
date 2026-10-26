@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eomari443 Dola Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-group">
+        <img src="icon48.png" alt="Logo" class="logo-img">
+        <div>
+          <h1>Eomari443 Downloader</h1>
+          <p class="subtitle">1080P Raw Master (No Watermark)</p>
+        </div>
+      </div>
+      <div class="status-pill">
+        <span class="dot"></span>
+        <span class="status-text">Active</span>
+      </div>
+    </div>
+
+    <!-- Quick stats -->
+    <div class="card stats-card">
+      <div class="stat-item">
+        <span class="stat-num" id="totalDownloaded">0</span>
+        <span class="stat-label">Videos Saved</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" id="detectedCount">0</span>
+        <span class="stat-label">In Current Chat</span>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div class="card controls-card">
+      <div class="control-row">
+        <span>Auto-download new videos</span>
+        <label class="switch">
+          <input type="checkbox" id="autoDownloadToggle" aria-label="Auto-download new videos">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="control-row">
+        <span>System notifications</span>
+        <label class="switch">
+          <input type="checkbox" id="notificationsToggle" aria-label="System notifications" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Detected videos -->
+    <div class="section-title">
+      <span>Detected master videos</span>
+      <button id="downloadAllBtn" class="batch-btn" style="display: none;">Download all</button>
+    </div>
+
+    <div class="videos-list" id="videosList">
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+        </svg>
+        <p>Open any Dola chat with videos to download master 1080P files!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

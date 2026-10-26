@@ -1,0 +1,19 @@
+# macOS and archive metadata
+.DS_Store
+__MACOSX/
+
+# Local development and generated output
+node_modules/
+dist/
+build/
+*.crx
+*.zip
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor files
+.idea/
+.vscode/
